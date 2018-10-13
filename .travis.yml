@@ -18,3 +18,16 @@ after_success:
   - docker push abeego/complex-nginx
   - docker push abeego/complex-api
   - docker push abeego/complex-worker
+
+deploy:
+  provider: elasticbeanstalk
+  region: eu-central-1
+  app: complex
+  env: Complex-env
+  bucket_name: elasticbeanstalk-eu-central-1-486418823754
+  bucket_path: docker-complex
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: $AWS_SECRET_KEY
