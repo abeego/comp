@@ -12,6 +12,7 @@ class App extends Component {
         <div className="App">
           <header>
             <h1>Fibonaci calculator</h1>
+            <h3>The Fibonaci calculator is state machine</h3>
             <Link to="/">Home</Link> | <Link to="/otherpage">Other Page</Link>
           </header>
           <br />
